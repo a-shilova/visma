@@ -1,22 +1,44 @@
-import styles from './App.module';
-import SamplePage from '@pages/Sample';
-import './main.css';
+import {
+    BrowserRouter,
+    Route,
+    RouterProvider,
+    Routes,
+    createBrowserRouter,
+} from 'react-router-dom'
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <div className={styles.title}>CSS module works!</div>
-      <div className={styles.subtitle}>CSS module + Tailwind works!</div>
-      <div
-        className={
-          'border-[10px] border-solid border-red-800 rounded-full w-[200px] h-[200px] flex items-center justify-center text-center'
-        }
-      >
-        Tailwind works!
-      </div>
-      <SamplePage />
-    </div>
-  );
-};
+import './main.css'
+import { Main } from '@pages/Main'
+import { Documents } from '@pages/Documents'
+import { Calculator } from '@pages/Calculator'
+import { useEffect } from 'react'
+import React from 'react'
 
-export default App;
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Main />,
+        errorElement: <div>Error</div>,
+        children: [
+            {
+                path: 'calc',
+                element: <Calculator />,
+            },
+            {
+                path: 'docs',
+                element: <Documents />,
+            },
+        ],
+    },
+    {
+        path: '*',
+        element: <div>Not match</div>,
+    },
+])
+
+const App: React.FC = () => (
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
+)
+
+export default App
