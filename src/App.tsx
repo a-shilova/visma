@@ -1,24 +1,24 @@
+import React from 'react'
 import {
-    BrowserRouter,
-    Route,
+    Link,
+    Outlet,
     RouterProvider,
-    Routes,
     createBrowserRouter,
 } from 'react-router-dom'
 
-import './main.css'
 import { Main } from '@pages/Main'
 import { Documents } from '@pages/Documents'
 import { Calculator } from '@pages/Calculator'
-import { useEffect } from 'react'
-import React from 'react'
+
+import './main.css'
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main />,
+        element: <Layout />,
         errorElement: <div>Error</div>,
         children: [
+            { index: true, element: <Main /> },
             {
                 path: 'calc',
                 element: <Calculator />,
@@ -34,6 +34,30 @@ const router = createBrowserRouter([
         element: <div>Not match</div>,
     },
 ])
+
+function Layout() {
+    return (
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/docs">Documents</Link>
+                    </li>
+                    <li>
+                        <Link to="/calc">Calculator</Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <hr />
+
+            <Outlet />
+        </div>
+    )
+}
 
 const App: React.FC = () => (
     <React.StrictMode>
