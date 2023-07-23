@@ -36,6 +36,7 @@ const config: webpack.Configuration = {
         alias: {
             // absolute path importing files
             '@pages': path.resolve(__dirname, './src/pages'),
+            '@components': path.resolve(__dirname, './src/components'),
         },
     },
     module: {
@@ -71,6 +72,10 @@ const config: webpack.Configuration = {
                     // Compiles Sass to CSS
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack', 'url-loader'],
             },
             {
                 test: /\.md$/, // .md

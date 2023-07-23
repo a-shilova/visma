@@ -1,0 +1,7 @@
+.shown {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}

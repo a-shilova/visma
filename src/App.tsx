@@ -1,68 +1,37 @@
 import React from 'react'
-import {
-    Link,
-    Outlet,
-    RouterProvider,
-    createBrowserRouter,
-} from 'react-router-dom'
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+
+import { Header } from '@components/Header/Header'
 
 import { Main } from '@pages/Main'
 import { Documents } from '@pages/Documents'
 import { Calculator } from '@pages/Calculator'
 
 import './main.css'
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Layout />,
-        errorElement: <div>Error</div>,
-        children: [
-            { index: true, element: <Main /> },
-            {
-                path: 'calc',
-                element: <Calculator />,
-            },
-            {
-                path: 'docs',
-                element: <Documents />,
-            },
-        ],
-    },
-    {
-        path: '*',
-        element: <div>Not match</div>,
-    },
-])
+import { Container } from '@components/Container/Container'
 
 function Layout() {
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/docs">Documents</Link>
-                    </li>
-                    <li>
-                        <Link to="/calc">Calculator</Link>
-                    </li>
-                </ul>
-            </nav>
+        <Container>
+            <Header />
 
             <hr />
 
             <Outlet />
-        </div>
+        </Container>
     )
 }
 
 const App: React.FC = () => (
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Main />} />
+                <Route path="/docs" element={<Documents />} />
+                <Route path="/calc" element={<Calculator />} />
+            </Route>
+        </Routes>
+    </BrowserRouter>
 )
 
 export default App

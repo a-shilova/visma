@@ -1,0 +1,8 @@
+.block {
+    width: 150px;
+}
+
+.border-color {
+    border-color: #333;
+    opacity: 0.2;
+}
