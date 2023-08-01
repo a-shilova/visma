@@ -25,7 +25,7 @@ export const Menu: FC<Props> = () => {
             )}
         >
             {titles.map(({ title, link }, index) => (
-                <MenuItem title={title} link={link} index={index} />
+                <MenuItem key={link} title={title} link={link} index={index} />
             ))}
         </div>
     )

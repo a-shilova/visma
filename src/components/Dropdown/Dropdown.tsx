@@ -23,6 +23,7 @@ export const Dropdown: FC<Props> = ({ items, dropdown, onItemClick }) => {
         >
             {items.map(({ title, link, index }) => (
                 <MenuItem
+                    key={title}
                     title={title}
                     link={link}
                     onItemClick={onItemClick}

@@ -11,7 +11,7 @@ export const Locale: FC<Props> = () => {
         useLocale()
 
     return (
-        <div className="flex flex-row items-center">
+        <div className="flex flex-col items-start">
             <button
                 className="flex flex-row gap-2.5 items-center"
                 onClick={toggleDropdown}
