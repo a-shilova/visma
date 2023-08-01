@@ -75,15 +75,15 @@
 }
 
 .black {
-    color: #333;
+    color: var(--black);
 }
 
 .white {
-    color: #fff;
+    color: var(--white);
 }
 
 .purple {
-    color: #3d348b;
+    color: var(--purple);
 }
 
 .weight400 {

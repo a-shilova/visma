@@ -26,16 +26,13 @@ type Props = {
     children: string
 }
 
-export const Typography: FC<Props> = (
-    {
-        size = '13',
-        variant = 'p-16',
-        color = 'black',
-        fontWeight = '400',
-        children,
-    }
-    // children
-) => {
+export const Typography: FC<Props> = ({
+    size = '13',
+    variant = 'p-16',
+    color = 'black',
+    fontWeight = '400',
+    children,
+}) => {
     return (
         <span
             className={cx(
