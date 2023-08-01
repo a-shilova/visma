@@ -1,3 +1,4 @@
+import { Typography } from '@components/Typography/Typography'
 import { FC, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -14,7 +15,6 @@ export const MenuItem: FC<MenuItemProps> = ({
     index,
 }) => {
     const onClick = useCallback(() => {
-        console.log('Clicked on', index)
         onItemClick && onItemClick(index)
     }, [index])
 
@@ -26,7 +26,7 @@ export const MenuItem: FC<MenuItemProps> = ({
                 className="whitespace-nowrap"
                 onClick={onClick}
             >
-                {title}
+                <Typography>{title}</Typography>
             </Link>
         </div>
     )

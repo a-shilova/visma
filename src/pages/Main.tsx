@@ -1,6 +1,6 @@
+import { Container } from '@components/Container/Container'
 import { FC } from 'react'
-import { Outlet } from 'react-router-dom'
 
 export const Main: FC = () => {
-    return <div>Main page</div>
+    return <Container>Main page</Container>
 }

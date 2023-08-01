@@ -1,5 +1,11 @@
 .block {
     width: 100%;
-    padding-left: 16%;
-    padding-right: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 1296px;
+    display: flex;
 }

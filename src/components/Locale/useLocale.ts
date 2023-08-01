@@ -29,12 +29,7 @@ export const useLocale = () => {
     )
 
     const toggleDropdown = useCallback(() => {
-        console.log('called')
         setDropdown((prev) => !prev)
-    }, [dropdown])
-
-    useEffect(() => {
-        console.log('dropdown', dropdown)
     }, [dropdown])
 
     const onLocaleClick = useCallback(

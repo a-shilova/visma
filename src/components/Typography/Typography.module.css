@@ -1,0 +1,95 @@
+.block {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.size13 {
+    font-size: 13px;
+}
+.size14 {
+    font-size: 14px;
+}
+.size16 {
+    font-size: 16px;
+}
+.size19 {
+    font-size: 19px;
+}
+.size40 {
+    font-size: 40px;
+}
+.size60 {
+    font-size: 60px;
+}
+
+.p-16 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.other-50b {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.other-16b-ttu-ls10 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.other-13b-ttu-ls10 {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 18.2px */
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.heading-19b {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 26.6px */
+}
+
+.heading-40b {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+}
+
+.p-14r {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.black {
+    color: #333;
+}
+
+.white {
+    color: #fff;
+}
+
+.purple {
+    color: #3d348b;
+}
+
+.weight400 {
+    font-weight: 400;
+}
+
+.weight700 {
+    font-weight: 700;
+}

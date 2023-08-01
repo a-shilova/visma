@@ -18,7 +18,12 @@ const titles = [
 
 export const Menu: FC<Props> = () => {
     return (
-        <div className={cx(styles.block, 'flex flex-row justify-between')}>
+        <div
+            className={cx(
+                styles.block,
+                ' flex flex-row justify-between items-center'
+            )}
+        >
             {titles.map(({ title, link }, index) => (
                 <MenuItem title={title} link={link} index={index} />
             ))}

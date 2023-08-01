@@ -9,11 +9,13 @@ type Props = {}
 
 export const Header: FC<Props> = () => {
     return (
-        <div className="flex flex-row justify-between py-10">
-            <Logo />
-            <Menu />
-            <Search />
-            <Locale />
-        </div>
+        <Container>
+            <div className="flex flex-row justify-between py-10 w-full items-center">
+                <Logo />
+                <Menu />
+                <Search />
+                <Locale />
+            </div>
+        </Container>
     )
 }

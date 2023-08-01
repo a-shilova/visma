@@ -8,17 +8,16 @@ import { Documents } from '@pages/Documents'
 import { Calculator } from '@pages/Calculator'
 
 import './main.css'
-import { Container } from '@components/Container/Container'
 
 function Layout() {
     return (
-        <Container>
+        <>
             <Header />
 
             <hr />
 
             <Outlet />
-        </Container>
+        </>
     )
 }
 

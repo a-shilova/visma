@@ -11,5 +11,9 @@ export const Container: FC<PropsWithChildren<Props>> = ({
     className,
     children,
 }) => {
-    return <div className={cx(styles.block, className)}>{children}</div>
+    return (
+        <div className={cx(styles.block, className)}>
+            <div className={styles.content}>{children}</div>
+        </div>
+    )
 }

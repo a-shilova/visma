@@ -14,7 +14,6 @@ type Props = {
 }
 
 export const Dropdown: FC<Props> = ({ items, dropdown, onItemClick }) => {
-    console.log('dropdown n dropdown', dropdown)
     return (
         <ul
             className={cx({
