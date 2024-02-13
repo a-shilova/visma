@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, PropsWithChildren, ReactElement } from 'react'
 import cx from 'classnames'
 
 import styles from './Typography.module.css'
@@ -23,14 +23,13 @@ type Props = {
     variant?: TypographyVariant
     color?: TypographyColor
     fontWeight?: TypographyWeight
-    children: string
 }
 
-export const Typography: FC<Props> = ({
+export const Typography: FC<PropsWithChildren<Props>> = ({
     size = '13',
     variant = 'p-16',
     color = 'black',
-    fontWeight = '400',
+    fontWeight,
     children,
 }) => {
     return (
@@ -40,7 +39,7 @@ export const Typography: FC<Props> = ({
                 styles[variant],
                 styles[color],
                 styles[`size${size}`],
-                styles[`weight${fontWeight}`]
+                fontWeight && styles[`weight${fontWeight}`]
             )}
         >
             {children}
