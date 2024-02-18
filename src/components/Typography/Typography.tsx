@@ -18,11 +18,14 @@ type TypographyColor = 'black' | 'white' | 'purple'
 
 type TypographyWeight = '400' | '700'
 
+type TypographyDecoration = 'dotted'
+
 type Props = {
     size?: TypographySize
     variant?: TypographyVariant
     color?: TypographyColor
     fontWeight?: TypographyWeight
+    decoration?: TypographyDecoration
 }
 
 export const Typography: FC<PropsWithChildren<Props>> = ({
@@ -30,6 +33,7 @@ export const Typography: FC<PropsWithChildren<Props>> = ({
     variant = 'p-16',
     color = 'black',
     fontWeight,
+    decoration,
     children,
 }) => {
     return (
@@ -39,6 +43,7 @@ export const Typography: FC<PropsWithChildren<Props>> = ({
                 styles[variant],
                 styles[color],
                 styles[`size${size}`],
+                decoration && styles[decoration],
                 fontWeight && styles[`weight${fontWeight}`]
             )}
         >

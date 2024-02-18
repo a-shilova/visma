@@ -1,0 +1,11 @@
+.pdf {
+    height: 34px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    padding: 8px 10px 8px 10px;
+}
+
+.block {
+    width: 306px;
+    gap: 10px;
+}
